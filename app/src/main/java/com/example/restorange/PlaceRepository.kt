@@ -9,6 +9,8 @@ class PlaceRepository(private val placeDao: PlaceDao) {
 
     val allPlaces: Flow<List<PlaceEntity>> = placeDao.getAllPlaces()
 
+    val allPlacesOrdered: Flow<List<PlaceEntity>> = placeDao.getAllPlacesOrdered()
+
     @WorkerThread
     suspend fun insert(place: PlaceEntity){
         placeDao.insert(place)

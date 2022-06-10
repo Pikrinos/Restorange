@@ -10,6 +10,8 @@ class PlaceViewModel(private val repository: PlaceRepository) : ViewModel() {
 
     val allPlaces: LiveData<List<PlaceEntity>> = repository.allPlaces.asLiveData()
 
+    val allPlacesOrdered: LiveData<List<PlaceEntity>> = repository.allPlacesOrdered.asLiveData()
+
     fun insert(place: PlaceEntity) = viewModelScope.launch{
         repository.insert(place)
     }

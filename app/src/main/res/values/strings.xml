@@ -5,4 +5,6 @@
     <string name="btn3">Clear</string>
     <string name="name">Name of Place</string>
     <string name="address">Address of Place</string>
+    <string name="rb1">Order by Rating</string>
+    <string name="rb2">Order by Update</string>
 </resources>

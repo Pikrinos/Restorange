@@ -51,6 +51,21 @@ class MainActivity : AppCompatActivity(),RateDialog.RateDialogListener,DeleteDia
         placeViewModel.allPlaces.observe(this) {
             adapter.submitList(it)
         }
+        val radioGroup = binding.group
+        radioGroup.check(binding.radioButton1.id)
+        radioGroup.setOnCheckedChangeListener { radioGroup, i ->
+            when (i) {
+                binding.radioButton1.id -> placeViewModel.allPlaces.observe(this) {
+                    adapter.submitList(it)
+                }
+                binding.radioButton2.id -> placeViewModel.allPlacesOrdered.observe(this) {
+                    adapter.submitList(it)
+                }
+                else -> placeViewModel.allPlaces.observe(this) {
+                    adapter.submitList(it)
+                }
+            }
+        }
 
         binding.fub.setOnClickListener {
             createPlaceLauncher.launch(EditPlaceActivity.Contract.Input(null))
