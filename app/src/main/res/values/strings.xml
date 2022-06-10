@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Restorange</string>
+    <string name="btn1">Аccept</string>
+    <string name="btn2">Cancel</string>
+    <string name="btn3">Clear</string>
+    <string name="name">Name of Place</string>
+    <string name="address">Address of Place</string>
+</resources>
